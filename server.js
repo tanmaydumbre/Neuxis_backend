@@ -43,7 +43,7 @@ app.get("/projects", async (req, res) => {
 
 app.get("/team", async (req, res) => {
   try {
-    const result = await pool.query("SELECT * FROM team ORDER BY id ASC");
+    const result = await pool.query("SELECT * FROM public.team ORDER BY id ASC");
     res.json(result.rows);
   } catch (err) {
     console.error("❌ Error fetching team:", err);
