@@ -17,9 +17,7 @@ app.use(bodyParser.json());
 
 // PostgreSQL connection pool using environment variable
 const pool = new Pool({
-  connectionString: process.env.DB_URL,
-  ssl: true,
-  options: "-c search_path=public"
+  connectionString: process.env.DB_URL
 
 });
 
